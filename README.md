@@ -37,3 +37,6 @@ Message sent: 29e1ea1a-493e-4153-bb40-d8f59210546b
 ## Sources
 - https://github.com/jimareed/azure-iot-raspi
 - https://github.com/Azure-Samples/azure-iot-samples-node
+
+## Next Steps
+Forward messages in Azure IoT Hub to a database
