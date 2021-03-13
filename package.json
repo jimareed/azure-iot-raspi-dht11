@@ -1,0 +1,23 @@
+{
+    "name": "azure-iot-raspi-dht11",
+    "version": "0.0.1",
+    "private": true,
+    "description": "Connect a Raspberry Pi with a DHT11 Temperature sensor to Azure IoT Hub",
+    "author": "Jim Reed",
+    "license": "MIT",
+    "dependencies": {
+      "azure-iot-device": "^1.7.1",
+      "azure-iot-device-amqp": "^1.7.1",
+      "azure-iot-device-http": "^1.7.1",
+      "azure-iot-device-mqtt": "^1.7.1",
+      "es5-shim": "^4.5.9",
+      "uuid": "^3.3.0"
+    },
+    "devDependencies": {
+      "jshint": "^2.9.2"
+    },
+    "scripts": {
+      "lint": "jshint --show-non-errors .",
+      "test": "npm -s run lint"
+    }
+  }
