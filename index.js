@@ -6,6 +6,8 @@ var Protocol = require('azure-iot-device-mqtt').Mqtt;
 var Client = require('azure-iot-device').Client;
 var Message = require('azure-iot-device').Message;
 
+var sensor = require("node-dht-sensor");
+ 
 // String containing Hostname, Device Id & Device Key in the following formats:
 //  "HostName=<iothub_host_name>;DeviceId=<device_id>;SharedAccessKey=<device_key>"
 var connectionString = process.env.DEVICE_CONNECTION_STRING;
@@ -47,5 +49,23 @@ client.open(function (err) {
         process.exit(0);
       }
     });
+  }
+});
+
+sensor.read(11, 4, function(err, temperature, humidity) {
+  if (!err) {
+    console.log(`temp: ${temperature}°C, humidity: ${humidity}%`);
+  }
+});
+
+sensor.read(11, 4, function(err, temperature, humidity) {
+  if (!err) {
+    console.log(`temp: ${temperature}°C, humidity: ${humidity}%`);
+  }
+});
+
+sensor.read(11, 4, function(err, temperature, humidity) {
+  if (!err) {
+    console.log(`temp: ${temperature}°C, humidity: ${humidity}%`);
   }
 });
