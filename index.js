@@ -18,7 +18,7 @@ if (!connectionString) {
 
 sensor.read(11, 4, function(err, temp, humidity) {
   if (!err) {
-    console.log(`temp: ${temp}C, humidity:${humidity}%`);
+    console.log(`temp: ${temp}C, humidity: ${humidity}%`);
     var client = Client.fromConnectionString(connectionString, Protocol);
 
     client.open(function (err) {
@@ -51,6 +51,7 @@ sensor.read(11, 4, function(err, temp, humidity) {
             process.exit(-1);
           } else {
             console.log('Message sent: ' + message.messageId);
+            process.exit(0);
           }
         });
       }

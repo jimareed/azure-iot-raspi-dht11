@@ -21,8 +21,10 @@ node index.js
 ```
 4. Verify message sent (should see something like)
 ```
-Sending message: {"value":"Hello from Raspberry Pi!"}
-Message sent: xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+temp: 23C, humdity: 27%
+Client connected
+Sending message: {"device":"Raspberry Pi - DHT11", "temp":23, "humidity":27}
+Message sent: 29e1ea1a-493e-4153-bb40-d8f59210546b
 ```
 5. Verify message received in Azure IoT Hub:
    - from Visual Studio Code, install the extension Azure IoT Tools
